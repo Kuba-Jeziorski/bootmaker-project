@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/index.css" rel="stylesheet" />
+    <script type="module" src="/src/main.ts"></script>
+    <title>Bootmaker</title>
+  </head>
+  <body class="w-screen h-screen overflow-x-hidden">
+    <div class="w-full h-full" id="app">
+      <section class="w-full h-full flex flex-col" x-data="boots">
+        <div class="flex w-full justify-center">
+          <div class="w-1/2 relative">
+            <div class="absolute w-full left-0 top-0 flex justify-between p-3">
+              <button
+                class="border bg-white rounded-sm border-black px-2 py-1 text-sm"
+              >
+                BEST SELLER
+              </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+              >
+                <path
+                  d="M12.5345 20.0576L20.1283 12.4639C21.9939 10.5889 22.2658 7.52327 20.5033 5.5639C20.0612 5.07013 19.5232 4.67166 18.922 4.39285C18.3208 4.11404 17.669 3.96074 17.0066 3.94231C16.3441 3.92389 15.6848 4.04072 15.0691 4.28569C14.4533 4.53065 13.8939 4.89859 13.4251 5.36702L12.0001 6.8014L10.772 5.5639C8.89701 3.69827 5.83138 3.4264 3.872 5.1889C3.37823 5.63092 2.97977 6.16897 2.70096 6.77018C2.42215 7.37139 2.26885 8.02314 2.25042 8.6856C2.23199 9.34805 2.34883 10.0073 2.59379 10.6231C2.83875 11.2389 3.20669 11.7982 3.67513 12.267L11.4658 20.0576C11.608 20.1985 11.8 20.2775 12.0001 20.2775C12.2003 20.2775 12.3923 20.1985 12.5345 20.0576V20.0576Z"
+                  stroke="#4D4D4D"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="flex flex-col gallery-imgs">
+              <template
+                x-for="(image, index) in variant[displayedVariant].images"
+              >
+                <img class="block" :src="image" />
+              </template>
+              <button
+                class="border p-5 mt-3 cursor-pointer w-[100px] gallery-img-button"
+              >
+                Show more media <span></span>
+              </button>
+            </div>
+          </div>
+          <div class="w-[560px] px-4 py-2">
+            <div class="sticky top-0 flex flex-col">
+              <div class="flex flex-col pb-4 border-b border-b-border">
+                <p
+                  class="text-base font-normal text-secondary"
+                  x-text="variant[displayedVariant].price"
+                ></p>
+                <h1
+                  class="pt-1 pb-3 text-primary text-[28px] font-light"
+                  x-text="variant[displayedVariant].productName"
+                ></h1>
+                <p class="text-sm` font-normal text-secondary">
+                  STYLE NO.
+                  <span
+                    x-text="variant[displayedVariant].referenceNumber"
+                  ></span>
+                </p>
+              </div>
+
+              <div class="flex flex-col border-b border-b-border py-4">
+                <p class="text-secondary text-sm">
+                  Color:
+                  <span
+                    class="text-black"
+                    x-text="variant[displayedVariant].colorName"
+                  ></span>
+                </p>
+                <div class="flex gap-4 py-4">
+                  <template x-for="(variant,index) in variant">
+                    <div class="h-11 aspect-square flex">
+                      <a href="#" @click.prevent="setVariant(index)">
+                        <img
+                          class="rounded-full border-2 p-[1px]"
+                          :class="index === displayedVariant ? 'border-primary' : 'border-border'"
+                          :src="variant.image"
+                        />
+                      </a>
+                    </div>
+                  </template>
+                </div>
+              </div>
+
+              <div class="flex flex-col border-b border-b-border py-4">
+                <p class="mb-4" x-text="description"></p>
+                <a class="mb-4 text-base text-primary underline" href="#details"
+                  >Read more below</a
+                >
+                <p>SELECT</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full" id="details"></div>
+      </section>
+    </div>
+  </body>
+</html>
