@@ -1,8 +1,8 @@
-import { localServerBootsUrl } from "../global/global-variables";
+import { localServerRecommendedUrl } from "../global/global-variables";
 
-export const getBoots = async () => {
+export const getRecommended = async () => {
   try {
-    const response = await fetch(localServerBootsUrl);
+    const response = await fetch(localServerRecommendedUrl);
     if (!response.ok) {
       throw new Error(
         `Response status: ${response.status}. Make sure that json-server is on!`

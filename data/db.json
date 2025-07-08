@@ -11,8 +11,8 @@
           "referenceNumber": "N4831.54-1521-B-6",
           "price": "$1,095",
           "size": [6, 6.5, 7, 7.5],
-          "width": "B",
-          "calfWidth": ["regular", "extended"],
+          "width": ["B"],
+          "calfWidth": ["Regular", "Extended"],
           "images": [
             "https://www.lucchese.com/cdn/shop/files/GY4579.S54_Right_2048x.jpg?v=1744392497",
             "https://www.lucchese.com/cdn/shop/files/GY4579.S54_Pair_2000x.jpg?v=1744392497",
@@ -36,8 +36,8 @@
           "referenceNumber": "N4831.54-1521-B-6",
           "price": "$1,200",
           "size": [8, 8.5, 9, 9.5, 10, 11],
-          "width": "B",
-          "calfWidth": ["regular", "extended"],
+          "width": ["B"],
+          "calfWidth": ["Regular", "Extended"],
           "images": [
             "https://www.lucchese.com/cdn/shop/files/N4831.54-1521_Right_2000x.jpg?v=1741629876",
             "https://www.lucchese.com/cdn/shop/files/N4831.54-1521_Pair_2000x.jpg?v=1741629876",
@@ -54,60 +54,7 @@
           "care": "Clean: Remove loose dust or dirt with damp cloth or soft brush. For heavily soiled products use Lucchese Leather Cleaner (see care instructions) Condition: Apply Lucchese Leather Conditioner to your boots liberally, let dry. Polish: Apply neutral or color matching cream-based polish and buff with a soft cloth to a shine. Protect: Apply Lucchese Premium Leather Protector."
         }
       ],
-      "description": "Our No. 1 bestselling boot for women, Priscilla walks an elegant line between timeless classic and cowgirl chic. The vintage-inspired Tioga stitch pattern harks back to yesteryear, but Priscilla is a boot built for today. This knee-skimming, pull-on silhouette handcrafted from Maracca suede deserves the spotlight under dresses and over jeans. Handmade in Texas.",
-      "recomendedProducts": [
-        {
-          "id": 1,
-          "name": "Priscilla Black",
-          "image": "https://www.lucchese.com/cdn/shop/files/GY4581S54-1001_Right_2000x.jpg?v=1748981155",
-          "price": "1000$",
-
-          "colors": [
-            {
-              "colorName": "Espresso",
-              "image": "https://cdn.starapps.studio/v2/apps/vsk/lucchese-inc/groups/122889/100/priscilla-suede-espresso.webp?width=80&height=80&crop=top"
-            },
-            {
-              "colorName": "Glitz Cream",
-              "image": "https://cdn.starapps.studio/v2/apps/vsk/lucchese-inc/groups/122889/100/priscilla-glitz-cream.webp?width=80&height=80&crop=top"
-            }
-          ]
-        },
-        {
-          "id": 2,
-          "name": "Priscilla Brown",
-          "image": "https://www.lucchese.com/cdn/shop/files/GY4580.S54-2009_Right_2000x.jpg?v=1741795510",
-          "price": "1300$",
-
-          "colors": [
-            {
-              "colorName": "Espresso",
-              "image": "https://cdn.starapps.studio/v2/apps/vsk/lucchese-inc/groups/122889/100/priscilla-suede-espresso.webp?width=80&height=80&crop=top"
-            },
-            {
-              "colorName": "Glitz Cream",
-              "image": "https://cdn.starapps.studio/v2/apps/vsk/lucchese-inc/groups/122889/100/priscilla-glitz-cream.webp?width=80&height=80&crop=top"
-            }
-          ]
-        },
-        {
-          "id": 3,
-          "name": "Priscilla Red",
-          "image": "https://www.lucchese.com/cdn/shop/files/N4830.54-6010_Right_91926abf-4f85-4aaa-847a-614881476036_2000x.jpg?v=1738689722",
-          "price": "1500$",
-
-          "colors": [
-            {
-              "colorName": "Espresso",
-              "image": "https://cdn.starapps.studio/v2/apps/vsk/lucchese-inc/groups/122889/100/priscilla-suede-espresso.webp?width=80&height=80&crop=top"
-            },
-            {
-              "colorName": "Glitz Cream",
-              "image": "https://cdn.starapps.studio/v2/apps/vsk/lucchese-inc/groups/122889/100/priscilla-glitz-cream.webp?width=80&height=80&crop=top"
-            }
-          ]
-        }
-      ]
+      "description": "Our No. 1 bestselling boot for women, Priscilla walks an elegant line between timeless classic and cowgirl chic. The vintage-inspired Tioga stitch pattern harks back to yesteryear, but Priscilla is a boot built for today. This knee-skimming, pull-on silhouette handcrafted from Maracca suede deserves the spotlight under dresses and over jeans. Handmade in Texas."
     }
   ]
 }
