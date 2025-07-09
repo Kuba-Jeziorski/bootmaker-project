@@ -14,13 +14,34 @@
           "width": ["B"],
           "calfWidth": ["Regular", "Extended"],
           "images": [
-            "https://www.lucchese.com/cdn/shop/files/GY4579.S54_Right_2048x.jpg?v=1744392497",
-            "https://www.lucchese.com/cdn/shop/files/GY4579.S54_Pair_2000x.jpg?v=1744392497",
-            "https://www.lucchese.com/cdn/shop/files/GY4579.S54_Front_2000x.jpg?v=1744392497",
-            "https://www.lucchese.com/cdn/shop/files/GY4579.S54_Back_2000x.jpg?v=1744392497",
-            "https://www.lucchese.com/cdn/shop/files/GY4579.S54_Angle_2000x.jpg?v=1744392497",
-            "https://www.lucchese.com/cdn/shop/files/GY4579.S54_Sole_2000x.jpg?v=1744392497",
-            "https://www.lucchese.com/cdn/shop/files/GY4579.S54_Vamp_2000x.jpg?v=1744392497"
+            {
+              "src": "https://www.lucchese.com/cdn/shop/files/GY4579.S54_Right_2048x.jpg?v=1744392497",
+              "alt": "Image alt"
+            },
+            {
+              "src": "https://www.lucchese.com/cdn/shop/files/GY4579.S54_Pair_2000x.jpg?v=1744392497",
+              "alt": "Image alt"
+            },
+            {
+              "src": "https://www.lucchese.com/cdn/shop/files/GY4579.S54_Front_2000x.jpg?v=1744392497",
+              "alt": "Image alt"
+            },
+            {
+              "src": "https://www.lucchese.com/cdn/shop/files/GY4579.S54_Back_2000x.jpg?v=1744392497",
+              "alt": "Image alt"
+            },
+            {
+              "src": "https://www.lucchese.com/cdn/shop/files/GY4579.S54_Angle_2000x.jpg?v=1744392497",
+              "alt": "Image alt"
+            },
+            {
+              "src": "https://www.lucchese.com/cdn/shop/files/GY4579.S54_Sole_2000x.jpg?v=1744392497",
+              "alt": "Image alt"
+            },
+            {
+              "src": "https://www.lucchese.com/cdn/shop/files/GY4579.S54_Vamp_2000x.jpg?v=1744392497",
+              "alt": "Image alt"
+            }
           ],
           "material": {
             "name": "Suede",
@@ -39,13 +60,34 @@
           "width": ["B"],
           "calfWidth": ["Regular", "Extended"],
           "images": [
-            "https://www.lucchese.com/cdn/shop/files/N4831.54-1521_Right_2000x.jpg?v=1741629876",
-            "https://www.lucchese.com/cdn/shop/files/N4831.54-1521_Pair_2000x.jpg?v=1741629876",
-            "https://www.lucchese.com/cdn/shop/files/N4831.54-1521_Front_2000x.jpg?v=1741629876",
-            "https://www.lucchese.com/cdn/shop/files/N4831.54-1521_Back_2000x.jpg?v=1741629876",
-            "https://www.lucchese.com/cdn/shop/files/N4831.54-1521_Angle_2000x.jpg?v=1741629876",
-            "https://www.lucchese.com/cdn/shop/files/N4831.54-1521_Sole_2000x.jpg?v=1741629876",
-            "https://www.lucchese.com/cdn/shop/files/N4831.54-1521_Vamp_2000x.jpg?v=1741629876"
+            {
+              "src": "https://www.lucchese.com/cdn/shop/files/N4831.54-1521_Right_2000x.jpg?v=1741629876",
+              "alt": "Image alt"
+            },
+            {
+              "src": "https://www.lucchese.com/cdn/shop/files/N4831.54-1521_Pair_2000x.jpg?v=1741629876",
+              "alt": "Image alt"
+            },
+            {
+              "src": "https://www.lucchese.com/cdn/shop/files/N4831.54-1521_Front_2000x.jpg?v=1741629876",
+              "alt": "Image alt"
+            },
+            {
+              "src": "https://www.lucchese.com/cdn/shop/files/N4831.54-1521_Back_2000x.jpg?v=1741629876",
+              "alt": "Image alt"
+            },
+            {
+              "src": "https://www.lucchese.com/cdn/shop/files/N4831.54-1521_Angle_2000x.jpg?v=1741629876",
+              "alt": "Image alt"
+            },
+            {
+              "src": "https://www.lucchese.com/cdn/shop/files/N4831.54-1521_Sole_2000x.jpg?v=1741629876",
+              "alt": "Image alt"
+            },
+            {
+              "src": "https://www.lucchese.com/cdn/shop/files/N4831.54-1521_Vamp_2000x.jpg?v=1741629876",
+              "alt": "Image alt"
+            }
           ],
           "material": {
             "name": "Material name",
