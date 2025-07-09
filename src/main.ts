@@ -15,6 +15,7 @@ import {
 import { handleSizeOverlayClose } from "./functions/handle-size-overlay-close";
 import { handleSlider } from "./functions/handle-slider";
 import { fetchAndStoreRecommended } from "./utils/fetch-and-store-recommended";
+import { handleGenericButton } from "./functions/handle-generic-button";
 
 fetchAndStoreBoots();
 
@@ -52,19 +53,36 @@ document.addEventListener("alpine:init", () => {
 
     let bootsData = { ...defaultBootsObject };
 
+    let recommendedData = [];
+
+    try {
+      const bootsRaw = localStorage.getItem("boots");
+      if (bootsRaw) {
+        const bootsParsed = JSON.parse(bootsRaw);
+        if (bootsParsed.length > 0) bootsData = bootsParsed[0];
+      }
+
+      const recommendedRaw = localStorage.getItem("recommended");
+      if (recommendedRaw) {
+        recommendedData = JSON.parse(recommendedRaw);
+      }
+    } catch (e) {
+      console.error("Error parsing localStorage:", e);
+    }
+
     return {
       ...bootsData,
 
-      // UI state
+      // UI STATE
       displayedVariant,
       displayedSize,
       displayedWidth,
       displayedCalfWidth,
 
-      // Additional data
+      // ADDITIONAL DATA
       recommended: [] as RecommendedItem[],
 
-      // Methods
+      // METHODS
       setVariant(index: string) {
         this.displayedVariant = index;
         localStorage.setItem("displayedVariant", String(index));
@@ -153,4 +171,15 @@ window.addEventListener("DOMContentLoaded", () => {
   // RECOMMENDED SLIDER
   sliderLeftButton?.addEventListener("click", () => handleSlider("left"));
   sliderRightButton?.addEventListener("click", () => handleSlider("right"));
+
+  // INFORM BUTTON
+  document.body.addEventListener("click", (e) => {
+    const target = e.target as Element;
+    const closest = target.closest(".generic-button");
+
+    if (!closest) {
+      return;
+    }
+    handleGenericButton();
+  });
 });

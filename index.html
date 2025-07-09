@@ -185,7 +185,7 @@
               </div>
               <div class="flex flex-col gap-4">
                 <button
-                  class="cursor-pointer flex justify-between p-4 items-center border border-black"
+                  class="generic-button cursor-pointer flex justify-between p-4 items-center border border-black"
                 >
                   <p class="text-primary">CHECK AVAILABILITY IN STORE</p>
                   <svg
@@ -483,10 +483,10 @@
                   </svg>
                 </button>
               </div>
-              <div class="flex justify-between items-center">
+              <div class="flex justify-between items-center py-4">
                 <div class="flex items-center gap-4">
                   <p>Size:</p>
-                  <button>
+                  <button class="generic-button cursor-pointer">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -514,69 +514,75 @@
                     </svg>
                   </button>
                 </div>
-                <div class="flex items-center">
-                  <button class="cursor-pointer flex gap-2 items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      role="img"
-                      aria-hidden="true"
+                <div class="flex items-center gap-4">
+                  <div class="flex items-center">
+                    <button
+                      class="generic-button cursor-pointer flex gap-2 items-center"
                     >
-                      <path
-                        d="M10.1446 1.85269L1.8538 10.1435C1.65854 10.3388 1.65854 10.6554 1.8538 10.8506L5.14671 14.1435C5.34197 14.3388 5.65855 14.3388 5.85381 14.1435L14.1446 5.8527C14.3399 5.65744 14.3399 5.34086 14.1446 5.1456L10.8517 1.85269C10.6565 1.65743 10.3399 1.65743 10.1446 1.85269Z"
-                        stroke="#0C2752"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                      <path
-                        d="M8.25 3.75L10.25 5.75"
-                        stroke="black"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                      <path
-                        d="M6 6L8 8"
-                        stroke="black"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                      <path
-                        d="M3.75 8.25L5.75 10.25"
-                        stroke="black"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                    </svg>
-                    <p>FIT GUIDE</p>
-                  </button>
-                </div>
-                <div class="h-6 w-[1px] bg-border"></div>
-                <div class="flex items-center">
-                  <button class="cursor-pointer flex gap-2 items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      role="img"
-                      aria-hidden="true"
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        role="img"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M10.1446 1.85269L1.8538 10.1435C1.65854 10.3388 1.65854 10.6554 1.8538 10.8506L5.14671 14.1435C5.34197 14.3388 5.65855 14.3388 5.85381 14.1435L14.1446 5.8527C14.3399 5.65744 14.3399 5.34086 14.1446 5.1456L10.8517 1.85269C10.6565 1.65743 10.3399 1.65743 10.1446 1.85269Z"
+                          stroke="#0C2752"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M8.25 3.75L10.25 5.75"
+                          stroke="black"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M6 6L8 8"
+                          stroke="black"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M3.75 8.25L5.75 10.25"
+                          stroke="black"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                      <p>FIT GUIDE</p>
+                    </button>
+                  </div>
+                  <div class="h-6 w-[1px] bg-border"></div>
+                  <div class="flex items-center">
+                    <button
+                      class="generic-button cursor-pointer flex gap-2 items-center"
                     >
-                      <path
-                        d="M6 4.5C6 3.96957 6.21071 3.46086 6.58579 3.08579C6.96086 2.71071 7.46957 2.5 8 2.5C8.53043 2.5 9.03914 2.71071 9.41421 3.08579C9.78929 3.46086 10 3.96957 10 4.5L1.2 11.1C1.11605 11.163 1.05403 11.2507 1.02274 11.3509C0.991453 11.4511 0.992473 11.5586 1.02566 11.6581C1.05884 11.7577 1.12251 11.8443 1.20764 11.9056C1.29278 11.967 1.39506 12 1.5 12H14.5C14.6049 12 14.7072 11.967 14.7924 11.9056C14.8775 11.8443 14.9412 11.7577 14.9743 11.6581C15.0075 11.5586 15.0085 11.4511 14.9773 11.3509C14.946 11.2507 14.884 11.163 14.8 11.1L8 6"
-                        stroke="#0C2752"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                    </svg>
-                    <p>SIZE CHART</p>
-                  </button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        role="img"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M6 4.5C6 3.96957 6.21071 3.46086 6.58579 3.08579C6.96086 2.71071 7.46957 2.5 8 2.5C8.53043 2.5 9.03914 2.71071 9.41421 3.08579C9.78929 3.46086 10 3.96957 10 4.5L1.2 11.1C1.11605 11.163 1.05403 11.2507 1.02274 11.3509C0.991453 11.4511 0.992473 11.5586 1.02566 11.6581C1.05884 11.7577 1.12251 11.8443 1.20764 11.9056C1.29278 11.967 1.39506 12 1.5 12H14.5C14.6049 12 14.7072 11.967 14.7924 11.9056C14.8775 11.8443 14.9412 11.7577 14.9743 11.6581C15.0075 11.5586 15.0085 11.4511 14.9773 11.3509C14.946 11.2507 14.884 11.163 14.8 11.1L8 6"
+                          stroke="#0C2752"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                      <p>SIZE CHART</p>
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div class="flex justify-center gap-2">
+              <div class="flex justify-center gap-2 p-3 bg-gray-50 mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="17"
@@ -647,9 +653,9 @@
                   ></button>
                 </template>
               </div>
-              <div class="flex items-center gap-4">
+              <div class="flex items-center gap-4 pt-8 pb-3">
                 <p>Width:</p>
-                <button>
+                <button class="generic-button cursor-pointer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -687,9 +693,9 @@
                   ></button>
                 </template>
               </div>
-              <div class="flex items-center gap-4">
+              <div class="flex items-center gap-4 pt-8 pb-3">
                 <p>Calf width:</p>
-                <button>
+                <button class="generic-button cursor-pointer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -727,12 +733,15 @@
                   ></button>
                 </template>
               </div>
-              <div class="flex gap-2">
-                <button
-                  class="size-overlay-close cursor-pointer w-full flex justify-center gap-1 items-center py-3 text-black hover:bg-border transition-all duration-300 border border-black"
-                >
-                  DONE
-                </button>
+              <div class="flex gap-2 mt-4 pt-3 border-t border-t-border">
+                <div class="flex">
+                  <button
+                    class="px-6 size-overlay-close cursor-pointer w-full flex justify-center gap-1 items-center py-3 text-black hover:bg-border transition-all duration-300 border border-black"
+                  >
+                    DONE
+                  </button>
+                </div>
+
                 <button
                   @click="()=>alert('Congratulation on your newest purchase!')"
                   class="cursor-pointer w-full flex justify-center gap-1 items-center py-3 bg-primary text-white hover:bg-secondary transition-all duration-300 border border-primary hover:border-secondary"
