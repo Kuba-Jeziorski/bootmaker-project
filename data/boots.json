@@ -1,16 +1,16 @@
 {
   "boots": [
     {
-      "id": 1,
+      "id": "1",
       "variant": [
         {
-          "id": 1,
+          "id": "1",
           "productName": "Priscilla Suede",
           "colorName": "Espresso",
           "image": "https://cdn.starapps.studio/v2/apps/vsk/lucchese-inc/groups/122889/100/priscilla-suede-espresso.webp?width=80&height=80&crop=top",
           "referenceNumber": "N4831.54-1521-B-6",
           "price": "$1,095",
-          "size": [6, 6.5, 7, 7.5],
+          "size": ["6", "6.5", "7", "7.5"],
           "width": ["B"],
           "calfWidth": ["Regular", "Extended"],
           "images": [
@@ -29,13 +29,13 @@
           "care": "Clean: Remove loose dust and dirt with a stiff bristle brush. Condition: Apply Lucchese Leather Conditioner liberally. Protect: Apply Lucchese Premium Leather Protector."
         },
         {
-          "id": 2,
+          "id": "2",
           "productName": "Priscilla",
           "colorName": "Glitz Cream",
           "image": "https://cdn.starapps.studio/v2/apps/vsk/lucchese-inc/groups/122889/100/priscilla-glitz-cream.webp?width=80&height=80&crop=top",
           "referenceNumber": "N4831.54-1521-B-6",
           "price": "$1,200",
-          "size": [8, 8.5, 9, 9.5, 10, 11],
+          "size": ["8", "8.5", "9", "9.5", "10", "11"],
           "width": ["B"],
           "calfWidth": ["Regular", "Extended"],
           "images": [

@@ -42,85 +42,15 @@ type RecommendedItem = {
   propositions: Proposition[];
 };
 
-// document.addEventListener("alpine:init", () => {
-//   Alpine.data("boots", () => ({
-//     ...defaultBootsObject,
-//     displayedVariant: Number(localStorage.getItem("displayedVariant") ?? "0"),
-//     displayedSize: Number(localStorage.getItem("displayedSize") ?? "0"),
-//     displayedWidth: localStorage.getItem("displayedWidth") ?? "N/A",
-//     displayedCalfWidth: localStorage.getItem("displayedCalfWidth") ?? "N/A",
-
-//     setVariant(index: number) {
-//       this.displayedVariant = index;
-//       localStorage.setItem("displayedVariant", String(index));
-//     },
-//     setSize(size: string) {
-//       this.displayedSize = Number(size);
-//       localStorage.setItem("displayedSize", String(size));
-//     },
-//     setWidth(width: string) {
-//       this.displayedWidth = width;
-//       localStorage.setItem("displayedWidth", width);
-//     },
-//     setCalfWidth(length: string) {
-//       this.displayedCalfWidth = length;
-//       localStorage.setItem("displayedCalfWidth", length);
-//     },
-
-//     refresh() {
-//       try {
-//         const bootsRaw = localStorage.getItem("boots");
-//         if (bootsRaw) {
-//           const boots = JSON.parse(bootsRaw);
-//           if (boots.length > 0) {
-//             Object.assign(this, boots[0]);
-//           }
-//         }
-//       } catch (err) {
-//         console.error("Error refreshing boots:", err);
-//       }
-//     },
-
-//     init() {
-//       this.refresh();
-
-//       setInterval(async () => {
-//         // update localStorage
-//         await fetchAndStoreBoots();
-//         // update Alpine state
-//         this.refresh();
-//       }, staleTime * 60 * 1000);
-//     },
-//   }));
-// });
-
 document.addEventListener("alpine:init", () => {
   Alpine.data("boots", () => {
-    const displayedVariant = Number(
-      localStorage.getItem("displayedVariant") ?? "0"
-    );
-    const displayedSize = Number(localStorage.getItem("displayedSize") ?? "0");
+    const displayedVariant = localStorage.getItem("displayedVariant") ?? "0";
+    const displayedSize = localStorage.getItem("displayedSize") ?? "N/A";
     const displayedWidth = localStorage.getItem("displayedWidth") ?? "N/A";
     const displayedCalfWidth =
       localStorage.getItem("displayedCalfWidth") ?? "N/A";
 
     let bootsData = { ...defaultBootsObject };
-    let recommendedData = [];
-
-    try {
-      const bootsRaw = localStorage.getItem("boots");
-      if (bootsRaw) {
-        const bootsParsed = JSON.parse(bootsRaw);
-        if (bootsParsed.length > 0) bootsData = bootsParsed[0];
-      }
-
-      const recommendedRaw = localStorage.getItem("recommended");
-      if (recommendedRaw) {
-        recommendedData = JSON.parse(recommendedRaw);
-      }
-    } catch (e) {
-      console.error("Error parsing localStorage:", e);
-    }
 
     return {
       ...bootsData,
@@ -132,16 +62,15 @@ document.addEventListener("alpine:init", () => {
       displayedCalfWidth,
 
       // Additional data
-      // recommended: recommendedData,
       recommended: [] as RecommendedItem[],
 
       // Methods
-      setVariant(index: number) {
+      setVariant(index: string) {
         this.displayedVariant = index;
         localStorage.setItem("displayedVariant", String(index));
       },
       setSize(size: string) {
-        this.displayedSize = Number(size);
+        this.displayedSize = size;
         localStorage.setItem("displayedSize", String(size));
       },
       setWidth(width: string) {
@@ -154,7 +83,7 @@ document.addEventListener("alpine:init", () => {
       },
 
       getRecommendedForDisplayed() {
-        const id = this.variant[this.displayedVariant]?.id;
+        const id = this.variant[Number(this.displayedVariant)]?.id;
         return (
           this.recommended.find(
             (singleRecommended) => singleRecommended.id === String(id)
