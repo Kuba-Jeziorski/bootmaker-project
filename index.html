@@ -108,9 +108,13 @@
                   <div class="flex gap-4 py-4">
                     <template x-for="(variant,index) in variant">
                       <div class="h-11 aspect-square flex">
-                        <a href="#" @click.prevent="setVariant(index)">
+                        <a
+                          class="w-full h-full"
+                          href="#"
+                          @click.prevent="setVariant(index)"
+                        >
                           <img
-                            class="rounded-full border-2 p-[1px]"
+                            class="rounded-full w-full h-full border-2 p-[1px]"
                             :class="index === displayedVariant ? 'border-primary' : 'border-border'"
                             :src="variant.image"
                             alt="variant.productName"
