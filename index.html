@@ -9,8 +9,8 @@
     <title>Bootmaker</title>
   </head>
   <body class="overflow-x-hidden">
-    <div class="w-full h-full" id="app">
-      <section class="w-full h-full flex flex-col" x-data="boots">
+    <div class="w-full h-full" id="app" x-data="boots">
+      <section class="w-full h-full flex flex-col">
         <div class="flex w-full max-w-[1500px] mx-auto justify-center">
           <div class="w-full relative">
             <div class="absolute w-full left-0 top-0 flex justify-between p-3">
@@ -40,7 +40,12 @@
               <template
                 x-for="(image, index) in variant[displayedVariant].images"
               >
-                <img class="block" :src="image" />
+                <img
+                  @click="setModalImg(image)"
+                  class="block cursor-pointer"
+                  :src="image"
+                  alt=""
+                />
               </template>
               <div class="flex justify-center">
                 <button
@@ -469,7 +474,7 @@
             </div>
           </div>
         </div>
-        <!-- overlay -->
+        <!-- select overlay -->
         <div
           id="size-overlay"
           class="fixed hidden justify-end top-0 left-0 w-screen h-screen"
@@ -783,6 +788,49 @@
                 </button>
               </div>
             </div>
+          </div>
+        </div>
+        <!-- img modal -->
+        <div
+          id="img-modal"
+          class="fixed hidden justify-center items-center top-0 left-0 w-screen h-screen"
+        >
+          <div
+            class="modal-close absolute top-0 left-0 w-full h-full bg-black opacity-40"
+          ></div>
+
+          <button
+            class="modal-close w-10 absolute z-1 top-5 right-5 aspect-square flex justify-center items-center cursor-pointer"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-hidden="true"
+            >
+              <path
+                d="M18.75 5.25L5.25 18.75"
+                stroke="#FFFFFF"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M18.75 18.75L5.25 5.25"
+                stroke="#FFFFFF"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </button>
+          <div
+            class="w-[560px] flex justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          >
+            <img class="w-full h-auto" :src="displayedInModal" />
           </div>
         </div>
       </section>

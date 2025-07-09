@@ -16,6 +16,8 @@ import { handleSizeOverlayClose } from "./functions/handle-size-overlay-close";
 import { handleSlider } from "./functions/handle-slider";
 import { fetchAndStoreRecommended } from "./utils/fetch-and-store-recommended";
 import { handleGenericButton } from "./functions/handle-generic-button";
+import { handleImgModalOpen } from "./functions/handle-img-modal-open";
+import { handleImgModalClose } from "./functions/handle-img-modal-close";
 
 fetchAndStoreBoots();
 
@@ -50,6 +52,7 @@ document.addEventListener("alpine:init", () => {
     const displayedWidth = localStorage.getItem("displayedWidth") ?? "N/A";
     const displayedCalfWidth =
       localStorage.getItem("displayedCalfWidth") ?? "N/A";
+    const displayedInModal = "";
 
     let bootsData = { ...defaultBootsObject };
 
@@ -78,6 +81,7 @@ document.addEventListener("alpine:init", () => {
       displayedSize,
       displayedWidth,
       displayedCalfWidth,
+      displayedInModal,
 
       // ADDITIONAL DATA
       recommended: [] as RecommendedItem[],
@@ -98,6 +102,9 @@ document.addEventListener("alpine:init", () => {
       setCalfWidth(length: string) {
         this.displayedCalfWidth = length;
         localStorage.setItem("displayedCalfWidth", length);
+      },
+      setModalImg(src: string) {
+        this.displayedInModal = src;
       },
 
       getRecommendedForDisplayed() {
@@ -181,5 +188,25 @@ window.addEventListener("DOMContentLoaded", () => {
       return;
     }
     handleGenericButton();
+  });
+
+  // IMG MODAL
+  document.body.addEventListener("click", (e) => {
+    const target = e.target as Element;
+    const closest = target.closest(".gallery-imgs img");
+
+    if (!closest) {
+      return;
+    }
+    handleImgModalOpen();
+  });
+  document.body.addEventListener("click", (e) => {
+    const target = e.target as Element;
+    const closest = target.closest(".modal-close");
+
+    if (!closest) {
+      return;
+    }
+    handleImgModalClose();
   });
 });
